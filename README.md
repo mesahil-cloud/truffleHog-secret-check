@@ -1,0 +1,1 @@
+# truffleHog-secret-check
