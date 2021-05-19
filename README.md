@@ -42,8 +42,8 @@ Edit your corresponding actions `yml` file or create a new one.
 ```yaml
 steps:
 - uses: actions/checkout@master
-- name: trufflehog-actions-scan
-  uses: edplato/trufflehog-actions-scan@master
+- name: trufflehog-secret-check
+  uses: mesahil-cloud/trufflehog-secret-check@main
 ```
 
 ### Custom Arguments
@@ -51,8 +51,8 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@master
-- name: trufflehog-actions-scan
-  uses: edplato/trufflehog-actions-scan@master
+- name: trufflehog-secret-check
+  uses: mesahil-cloud/trufflehog-secret-check@main
   with:
     scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json" # Add custom options here*
 
