@@ -11,14 +11,10 @@ It is recommended to run a basic trufflehog scan on your entire repository prior
 
 ```txt
 
-workflow "Detect Secrets" {
-  on = "push"
-  resolves = ["edplato/trufflehog-actions-scan"]
-}
-
-action "edplato/trufflehog-actions-scan" {
-  uses = "edplato/trufflehog-actions-scan@master"
-}
+- name: trufflehog-secret-check
+  uses: mesahil-cloud/trufflehog-secret-check@main
+  with:
+    scanArguments: "--allow truffleHog/allow.json --regex --entropy False --max_depth 1"
 
 ```
 
